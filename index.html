@@ -50,25 +50,19 @@
 	<script>
 	  var mymap = L.map('mapid');
 	  mymap.setView([-45.042778, 168.645278], 10);
-	  
 	  var osm = L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png");
 	  osm.addTo(mymap);
-
 	  var marker = L.marker([-45.042778, 168.645278]);
-	  marker.addTo(mymap);
-	  
+	  marker.addTo(mymap);	  
 	  var popup = L.popup();
-
       function onMapClick(e) {
       popup
         .setLatLng(e.latlng)
         .setContent("Queenstown")
         .openOn(mymap);
-    }
-
+      }
       mymap.on('click', onMapClick);
-	  
-	  
+	 
 	 </script>
 </body>
 </html>
